@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub_ecommerce/ui/screen/home_page.dart';
+import 'package:fruithub_ecommerce/ui/screen/splash_screen.dart';
+import 'package:fruithub_ecommerce/ui/screen/welcome_screen.dart';
+
+import 'ui/screen/authentication_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,27 +16,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Fruit Hub',
-      home: MyHomePage(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Fruit Hub"),
-      ),
-      body: SizedBox(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const SplashScreen(),
+        '/home': (context) => const HomePage(),
+        '/welcome_screen': (context) => const WelcomeScreen(),
+        '/auth_screen': (context) => AuthenticationPage(),
+      },
     );
   }
 }
