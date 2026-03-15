@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fruithub_ecommerce/ui/screen/basket_page.dart';
 import 'package:fruithub_ecommerce/ui/screen/home_page.dart';
+import 'package:fruithub_ecommerce/ui/screen/product_details_page.dart';
 import 'package:fruithub_ecommerce/ui/screen/splash_screen.dart';
 import 'package:fruithub_ecommerce/ui/screen/welcome_screen.dart';
 
@@ -23,6 +25,8 @@ class MyApp extends StatelessWidget {
         '/home': (context) => const HomePage(),
         '/welcome_screen': (context) => const WelcomeScreen(),
         '/auth_screen': (context) => AuthenticationPage(),
+        '/product_details': (context) => ProductDetailsPage(),
+        '/basket': (context) => BasketPage(),
       },
     );
   }
