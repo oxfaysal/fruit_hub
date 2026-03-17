@@ -1,5 +1,10 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:fruithub_ecommerce/core/color/app_color.dart';
+import 'package:fruithub_ecommerce/core/text_style/app_text_style.dart';
+
+import '../../core/color/random_color.dart';
 
 class BasketCard extends StatelessWidget {
   const BasketCard({
@@ -8,6 +13,7 @@ class BasketCard extends StatelessWidget {
     required this.image,
     required this.price,
   });
+
 
   final String title;
   final String image;
@@ -23,10 +29,19 @@ class BasketCard extends StatelessWidget {
       ),
       padding: EdgeInsets.all(12),
       child: ListTile(
-        title: Text(title),
-        subtitle: Text("2 packs"),
-        leading: Image.asset(image),
-        trailing: Text("₦ $price"),
+        contentPadding: EdgeInsets.all(0),
+        title: Text(title, style: AppTextStyle.titleBlack16,),
+        subtitle: Text("2 packs", style: AppTextStyle.titleBlack14,),
+        leading: Container(
+          width: 60,
+          decoration: BoxDecoration(
+            color: cardColors[Random().nextInt(cardColors.length)],
+            borderRadius: BorderRadius.circular(12),
+            image: DecorationImage(image: AssetImage(image), scale: 12),
+            border: Border.all(color: AppColor.subTextColor.withAlpha(12))
+          ),
+        ),
+        trailing: Text("₦ $price", style: AppTextStyle.titleBlack16,),
       ),
     );
   }

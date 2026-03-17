@@ -78,12 +78,11 @@ class _HomePageState extends State<HomePage> {
                 itemCount: comboItems.length,
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  Color cardColor = Color(int.parse(comboItems[index]['color']));
                   return ItemCard(
                     title: comboItems[index]['title'],
                     image: comboItems[index]['image'],
                     price: comboItems[index]['price'],
-                    bgColors: cardColor,
+                    bgColors: Color(0xFFFFFFFF),
                     onTap: () {
                       Navigator.pushNamed(context, '/product_details');
                     },
@@ -116,12 +115,10 @@ class _HomePageState extends State<HomePage> {
                   itemCount: _filteredItems.length,
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    Color cardColor = Color(int.parse(_filteredItems[index]['color']));
                     return ItemCard(
                       title: _filteredItems[index]['title'],
                       image: _filteredItems[index]['image'],
                       price: _filteredItems[index]['price'],
-                      bgColors: cardColor,
                       onTap: () {
                         Navigator.pushNamed(context, '/product_details');
                       },

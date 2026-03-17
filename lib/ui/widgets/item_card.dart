@@ -1,6 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:fruithub_ecommerce/core/color/app_color.dart';
 
+import '../../core/color/random_color.dart';
 import '../../core/text_style/app_text_style.dart';
 
 class ItemCard extends StatelessWidget {
@@ -26,7 +29,7 @@ class ItemCard extends StatelessWidget {
       child: Container(
         width: 180,
         decoration: BoxDecoration(
-          color: bgColors ?? AppColor.whiteColor,
+          color: bgColors ?? cardColors[Random().nextInt(cardColors.length)],
           borderRadius: BorderRadius.circular(16),
           boxShadow: [
             BoxShadow(
