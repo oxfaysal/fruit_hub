@@ -70,6 +70,12 @@ class AppTextStyle {
     color: AppColor.whiteColor,
   );
 
+  static final titlePrimary16 = GoogleFonts.josefinSans(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    color: AppColor.primaryColor,
+  );
+
   static final titlePrimary14 = GoogleFonts.josefinSans(
     fontSize: 14,
     fontWeight: FontWeight.bold,

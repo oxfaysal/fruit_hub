@@ -36,7 +36,11 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Icon(Icons.menu_open, size: 25),
-                Image.asset("assets/images/basket.png", width: 70, height: 70),
+                InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, '/basket');
+                    },
+                    child: Image.asset("assets/images/basket.png", width: 70, height: 70)),
               ],
             ),
             SizedBox(height: 22),

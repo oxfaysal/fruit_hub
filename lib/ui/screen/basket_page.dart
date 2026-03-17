@@ -4,6 +4,7 @@ import 'package:fruithub_ecommerce/ui/widgets/basket_card.dart';
 
 import '../../core/color/app_color.dart';
 import '../../core/json/recommended_combo.dart';
+import '../widgets/address_bottom_sheet.dart';
 import '../widgets/custom_app_bar.dart';
 import '../widgets/custom_button.dart';
 
@@ -73,7 +74,14 @@ class _BasketPageState extends State<BasketPage> {
                             flex: 6,
                             child: CustomButton(
                               title: "Checkout",
-                              onPressed: () {},
+                              onPressed: () {
+                                showModalBottomSheet(
+                                  context: context,
+                                  backgroundColor: Colors.transparent,
+                                  isScrollControlled: true,
+                                  builder: (context) => const AddressBottomSheet(),
+                                );
+                              },
                             ),
                           ),
                         ],

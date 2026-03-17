@@ -26,13 +26,13 @@ class CustomTextField extends StatelessWidget {
         labelText: label,
         prefixIcon: icon != null ? Icon(icon, color: AppColor.subTextColor) : null,
         hintText: hint,
-        filled: true,
+
         focusColor: AppColor.primaryColor,
         labelStyle: TextStyle(color: AppColor.subTextColor),
-        fillColor: AppColor.inputBgColor,
+
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide.none,
+          borderSide: BorderSide(color: AppColor.inputBgColor,),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
