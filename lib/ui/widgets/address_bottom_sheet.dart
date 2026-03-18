@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fruithub_ecommerce/core/color/app_color.dart';
 import 'package:fruithub_ecommerce/core/text_style/app_text_style.dart';
 import 'package:fruithub_ecommerce/ui/widgets/custom_outline_button.dart';
 import 'package:fruithub_ecommerce/ui/widgets/custom_text_feild.dart';
+import 'package:fruithub_ecommerce/ui/widgets/payment_bottom_sheet.dart';
 
 class AddressBottomSheet extends StatelessWidget {
   const AddressBottomSheet({super.key});
@@ -70,13 +70,24 @@ class AddressBottomSheet extends StatelessWidget {
               children: [
                 Expanded(
                   child: CustomOutlineButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, '/confirm');
+                    },
                     title: "Pay on delivery",
                   ),
                 ),
                 Expanded(
                   child: CustomOutlineButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      showModalBottomSheet(
+                        context: context,
+                        backgroundColor: Colors.transparent,
+                        isScrollControlled: true,
+                        builder: (context) => const PaymentBottomSheet(),
+                      );
+                    },
                     title: "Pay with card",
                   ),
                 ),

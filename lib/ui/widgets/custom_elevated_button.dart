@@ -7,12 +7,13 @@ class CustomElevatedButton extends StatelessWidget {
     required this.onPressed,
     required this.title,
     required this.color,
+    this.isPrimaryColor,
   });
 
   final VoidCallback onPressed;
   final String title;
   final Color color;
-
+  final bool? isPrimaryColor;
 
   @override
   Widget build(BuildContext context) {
@@ -24,9 +25,16 @@ class CustomElevatedButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: color,
           foregroundColor: Colors.white,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
         ),
-        child: Text(title, style: AppTextStyle.titleWhite16,),
+        child: Text(
+          title,
+          style: isPrimaryColor == true
+              ? AppTextStyle.titlePrimary16
+              : AppTextStyle.titleWhite16,
+        ),
       ),
     );
   }

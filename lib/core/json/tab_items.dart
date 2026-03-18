@@ -23,8 +23,50 @@ List<Map<String, dynamic>> tabAllItems = [
     "image": "assets/images/mango_combo.png",
     "price": "8,000",
     'category': 'Popular',
-
-  },{
+  },
+  {
+    "title": "Honey mango combo",
+    "image": "assets/images/mango_combo.png",
+    "price": "8,000",
+    'category': 'Popular',
+  },
+  {
+    "title": "Honey mango combo",
+    "image": "assets/images/mango_combo.png",
+    "price": "8,000",
+    'category': 'Popular',
+  },
+  {
+    "title": "Honey mango combo",
+    "image": "assets/images/mango_combo.png",
+    "price": "8,000",
+    'category': 'Popular',
+  },
+  {
+    "title": "Honey mango combo",
+    "image": "assets/images/mango_combo.png",
+    "price": "8,000",
+    'category': 'Popular',
+  },
+  {
+    "title": "Honey lime combo",
+    "image": "assets/images/honey_combo.png",
+    "price": "2,000",
+    'category': 'New combo',
+  },
+  {
+    "title": "Honey lime combo",
+    "image": "assets/images/honey_combo.png",
+    "price": "2,000",
+    'category': 'New combo',
+  },
+  {
+    "title": "Honey lime combo",
+    "image": "assets/images/honey_combo.png",
+    "price": "2,000",
+    'category': 'New combo',
+  },
+  {
     "title": "Honey lime combo",
     "image": "assets/images/honey_combo.png",
     "price": "2,000",
@@ -36,5 +78,22 @@ List<Map<String, dynamic>> tabAllItems = [
     "price": "8,000",
     'category': 'Top',
   },
-
+  {
+    "title": "Honey mango combo",
+    "image": "assets/images/mango_combo.png",
+    "price": "8,000",
+    'category': 'Top',
+  },
+  {
+    "title": "Honey mango combo",
+    "image": "assets/images/mango_combo.png",
+    "price": "8,000",
+    'category': 'Top',
+  },
+  {
+    "title": "Honey mango combo",
+    "image": "assets/images/mango_combo.png",
+    "price": "8,000",
+    'category': 'Top',
+  },
 ];

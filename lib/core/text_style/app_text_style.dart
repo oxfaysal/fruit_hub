@@ -45,6 +45,11 @@ class AppTextStyle {
     fontWeight: FontWeight.w400,
     color: Color(0xFF000000),
   );
+  static final titleSubBlack14 = GoogleFonts.josefinSans(
+    fontSize: 14,
+    fontWeight: FontWeight.w400,
+    color: AppColor.subTextColor,
+  );
 
   static final titleBlack32 = GoogleFonts.josefinSans(
     fontSize: 32,

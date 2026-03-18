@@ -30,8 +30,8 @@ class BasketCard extends StatelessWidget {
       padding: EdgeInsets.all(12),
       child: ListTile(
         contentPadding: EdgeInsets.all(0),
-        title: Text(title, style: AppTextStyle.titleBlack16,),
-        subtitle: Text("2 packs", style: AppTextStyle.titleBlack14,),
+        title: Text(title, style: AppTextStyle.titleBlack16w500,),
+        subtitle: Text("2 packs", style: AppTextStyle.titleSubBlack14,),
         leading: Container(
           width: 60,
           decoration: BoxDecoration(
